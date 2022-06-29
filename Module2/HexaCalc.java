@@ -94,7 +94,7 @@ class HexaOperation{
 	
 	
 	public boolean checkEqual(String num1,String num2) {
-		int result = compareTo("1AB","1AB");
+		int result = compareTo(num1,num2);
 		if(result==0) 
 			return true;
 		else
@@ -104,7 +104,7 @@ class HexaOperation{
 	}
 	public boolean checkSmaller(String num1,String num2) {
 		
-		int result = compareTo("1AB","1AB");
+		int result = compareTo(num1,num2);
 		if(result < 0) 
 			return true;
 		else
@@ -112,8 +112,8 @@ class HexaOperation{
 	}
 	public boolean checkGreater(String num1,String num2) {
 		
-	int result = compareTo("1AB","1AB");
-	if(result>0) 
+	int result = compareTo(num1,num2);
+	if(result> 0) 
 		return true;
 	else
 		return false;
@@ -162,8 +162,23 @@ class HexaOperation{
 		
 	    
 	}
+	public boolean HexaValidate(String num) {
+		int n = num.length();
+		for(int i=0;i<n;i++) {
+			char ch = num.charAt(i);
+			if ((ch < '0' || ch > '9')
+	                && (ch < 'A' || ch > 'F')) {
+	 
+	                 
+	                return false;
+	            }
+	        }
+		return true;
+		}
+		
 	
-}
+}	
+
 
 
 
@@ -176,14 +191,21 @@ public class HexaCalc {
 		HexaOperation op = new HexaOperation();
 		
 		Scanner sc = new Scanner(System.in);
+		do {
+			
 		
 		System.out.println("Enter Hexadecimal String 1: ");
 		String num1 = sc.next();
-		System.out.println("Enter Hexadecimal String 1: ");
+		System.out.println("Enter Hexadecimal String 2: ");
 		String num2 = sc.next();
+		if(!(op.HexaValidate(num1) && op.HexaValidate(num2)) ) {
+			System.out.println("Your Input is incorrect! Please Try Again");
+			
+			continue;
+		}
 		
-		boolean flag=true;
-	
+		
+		
 		System.out.println("1. Add Two Number: ");
 		System.out.println("2. Subtract Two Number: ");
 		System.out.println("3. Multiply Two Number: ");
@@ -194,6 +216,7 @@ public class HexaCalc {
 		System.out.println("7. Exit");
 		System.out.println();
 		
+		boolean flag =true;
 		while(flag)	{
 		System.out.println("Which Operation To Perform: ");
 		int choice = sc.nextInt();
@@ -224,11 +247,14 @@ public class HexaCalc {
 			break;
 		case 7:
 			flag=false;
-			
+			System.exit(0);
 			break;
 			
 		}
 		
 	}
+		
 	}
+	while(true);
+}
 }
