@@ -11,16 +11,13 @@ class areaOperation{
 		
 		try {
 			double area=0;
-			
 			area = 0.5 * height * width;
-			
 			return area;
 		}
 		catch(ArithmeticException e) {
 			System.out.println(e);
 			return -1d;
 		}
-		
 	}
 	
 	/**
@@ -32,14 +29,12 @@ class areaOperation{
 		
 		try {
 			double area = height * width;
-			
 			return area;
 		}
 		catch(ArithmeticException e) {
 			System.out.println(e);
 			return -1d;
 		}
-		
 	}
 	
 	/**
@@ -51,14 +46,12 @@ class areaOperation{
 		
 		try {
 			double area = width*width;
-			
 			return area;
 		}
 		catch(ArithmeticException e) {
 			System.out.println(e);
 			return -1d;
 		}
-		
 	}
 	
 	/**
@@ -70,32 +63,24 @@ class areaOperation{
 		
 		try {
 			double pi = 3.14;
-			
 			double area = pi * radius * radius;
-			
 			return area;
 		}
 		catch(ArithmeticException e) {
 			System.out.println(e);
 			return -1d;
 		}
-		
-		
 	}
-	
 }
-
 
 public class Area {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		areaOperation op = new areaOperation();
-		
-		System.out.println(op.triangleArea(5, 0));
-		System.out.println(op.rectangleArea(10, 5));
-		System.out.println(op.squareArea(5));
-		System.out.println(op.circleArea(8));
+		System.out.println("Area of Triangle is: "+op.triangleArea(5, 5));
+		System.out.println("Area of Rectangle is: "+op.rectangleArea(10, 5));
+		System.out.println("Area of Square is: "+op.squareArea(5));
+		System.out.println("Area of Circle is: "+op.circleArea(8));
 	}
-
 }

@@ -23,7 +23,6 @@ class gradesCalculation{
 			System.out.println(e);
 			return -1f;
 		}
-		
 	}
 	
 	/**
@@ -46,7 +45,6 @@ class gradesCalculation{
 			System.out.println(e);
 			return -1f;
 		}
-		
 	}
 	
 	/**
@@ -93,11 +91,8 @@ class gradesCalculation{
 			System.out.println(e);
 			return -1f;
 		}
-		
-		
 	}
 }
-
 
 public class MarkSheet {
 
@@ -128,5 +123,4 @@ public class MarkSheet {
 		System.out.println("Percentage is : ");
 		System.out.printf("%.2f", gc.percentage(grades));
 	}
-
 }

@@ -2,9 +2,8 @@ package p3;
 import java.util.*;
 
 
-class strOperation{
-	
-	/**
+class stringOperation{
+	 /**
 	 * To check whether Strings are Equal or not.
 	 * @param Two Strings values which are to be checked
 	 * @return   return 1 if strings are equal and 0 if not equal.
@@ -96,7 +95,7 @@ public class stringPlay {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		
-		strOperation str = new strOperation();
+		stringOperation str = new stringOperation();
 		
 		System.out.println("1. Check Equal or Not: ");
 		System.out.println("2. Reverse the String: ");
@@ -118,12 +117,11 @@ public class stringPlay {
 			System.out.println(str.checkString(str1,str2));
 			break;
 			
-			
-			
 		case 2:
 			System.out.println("Enter String : ");
 			String st = sc.next();
 			System.out.println(str.reverseStr(st));
+			break;
 			
 		case 3:
 			System.out.println("Enter String : ");
@@ -139,9 +137,4 @@ public class stringPlay {
 			break;
 		}
 	}
-
-	
-		// TODO Auto-generated method stub
-		
-
 }
