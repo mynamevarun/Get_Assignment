@@ -7,35 +7,37 @@ class HcfAndLcm{
 	
 	/**
 	 * Function to return the lcm of two numbers using recursion
-	 * @param two numbers as input
+	 * @param num1- first number of int type
+	 * @param num2 - second number of int type
 	 * @return   return the lcm of two numbers
 	 */
-	public int lcm_of_two_number(int x,int y) {
+	public int calculateLcm(int num1,int num2) {
 		
-		multiple+=y;
+		multiple+=num2;
 		
 		//base case
-		if((multiple%x==0) && (multiple%y==0)) {
+		if((multiple%num1==0) && (multiple%num2==0)) {
 			return multiple;
 		}
 		else {
-			return lcm_of_two_number(x,y);
+			return calculateLcm(num1,num2);
 		}
 	}
 	
 	/**
 	 * Function to return the HCF of two numbers using recursion
-	 * @param  two numbers as input
-	 * @return   return the HCF of two numbers
+	 * @param num1- first number of int type
+	 * @param num2 - second number of int type
+	 * @return   HCF of two numbers
 	 */
-	public int hcf_of_two_number(int num1,int num2) {
+	public int calculateHcf(int num1,int num2) {
 		
 		// base case
 		if(num1%num2==0) {
 			return num2;
 		}
 		
-		return hcf_of_two_number(num2,num1%num2); // recursive call to function 
+		return calculateHcf(num2,num1%num2); // recursive call to function 
 	}
 }
 
@@ -72,7 +74,7 @@ public class MathOperation {
 				System.out.println("The number should be Positive! RETRY. ");
 				break;
 			}
-			System.out.println("The Lcm of two number is : "+hl.lcm_of_two_number(num1, num2));
+			System.out.println("The Lcm of two number is : "+hl.calculateLcm(num1, num2));
 			break;
 			
 		case 2:
@@ -85,7 +87,7 @@ public class MathOperation {
 				System.out.println("The number should be Positive! RETRY. ");
 				break;
 			}
-			System.out.println("The Hcf of two number is : "+hl.hcf_of_two_number(num1, num2));
+			System.out.println("The Hcf of two number is : "+hl.calculateHcf(num1, num2));
 			break;
 		case 3:
 			System.exit(0);

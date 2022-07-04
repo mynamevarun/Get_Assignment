@@ -12,7 +12,7 @@ class RecursionTest {
 	public void Lcm_Positive_Test() {
 		//we expect that it returns TRUE
 		HcfAndLcm junit = new HcfAndLcm();
-		int result = junit.lcm_of_two_number(2,3);
+		int result = junit.calculateLcm(2,3);
 	    assertEquals(6,result);
 	}
 	
@@ -20,7 +20,7 @@ class RecursionTest {
 	public void Lcm_Negative_Test() {
 		//we expect that it returns False
 		HcfAndLcm junit = new HcfAndLcm();
-		int result = junit.lcm_of_two_number(0,0);
+		int result = junit.calculateLcm(0,0);
 	    assertEquals(0,result);
 	}
 	
@@ -28,7 +28,7 @@ class RecursionTest {
 	public void Hcf_Positive_Test() {
 		//we expect that it returns TRUE
 		HcfAndLcm junit = new HcfAndLcm();
-		int result = junit.hcf_of_two_number(10,5);
+		int result = junit.calculateHcf(10,5);
 	    assertEquals(5,result);
 	}
 	
@@ -36,7 +36,7 @@ class RecursionTest {
 	public void Hcf_Negative_Test() {
 		//we expect that it returns False
 		HcfAndLcm junit = new HcfAndLcm();
-		int result = junit.hcf_of_two_number(0,0);
+		int result = junit.calculateHcf(0,0);
 	    assertEquals(0,result);
 	}
 	

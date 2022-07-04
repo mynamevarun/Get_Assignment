@@ -6,8 +6,10 @@ public class knightTour {
 	public static final int N = 8;
 	 
     
-	/*  Check if `(x, y)` is valid chessboard coordinates.
-	 * @params take 2d array of int type and x and y points 
+	/*  Check if `(row, col)` is valid chessboard coordinates.
+	 * @params row - number of row
+	 * @params col - number of col
+	 * @params visited - 2-D array use to store the movement of knight
 	 * @returns bool results
 	 */ 
    
@@ -27,23 +29,23 @@ public class knightTour {
     }
      
      /*  Recursive function to perform the knight's tour using backtracking
-	 * @params take 2d array of int type which show the position of knight
-	 * @params row number of knight
-	 * @params column number if knight
-	 * @params position number of knight
-	 * @params array of total possible moves in x direction
-	 * @params array of possible moves in y direction
+	 * @params visited- take 2d array of int type which show the position of knight
+	 * @params row - row number of knight
+	 * @params col - column number if knight
+	 * @params pos -  position number of knight
+	 * @params xMove - array of total possible moves in x direction
+	 * @params yMove - array of possible moves in y direction
 	 * @returns True/False: based on to possible to arrange knight or not
 	 */ 
-    private static boolean knightTour(int[][] visited, int x, int y, int pos,int xMove[],int yMove[])
+    private static boolean knightTour(int[][] visited, int row, int col, int pos,int xMove[],int yMove[])
     {
     	int xNext, yNext;
     	   if (pos == N*N)     //when the total board is covered
     	      return true;
     	   
     	   for (int k = 0; k < N; k++) {
-    		      xNext = x + xMove[k];
-    		      yNext = y + yMove[k];
+    		      xNext = row + xMove[k];
+    		      yNext = col + yMove[k];
     		      
     		      if (isValid(xNext, yNext, visited)) {     //check room is preoccupied or not
     		         visited[xNext][yNext] = pos;
@@ -57,8 +59,8 @@ public class knightTour {
          }
     
     /*  function to process the knight's tour solutions
-	 * @params take 2d array of int type 
-	 * @returns bool results
+	 * @params visited- 2-D array use to store the order of movement of knight
+	 * @returns True/False: based on results
 	 */ 
     private static boolean findKnightTour(int [][]visited) {
     	

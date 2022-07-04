@@ -4,7 +4,10 @@ import java.util.*;
 class arrangeNQueen{
 	
 	/*A function to check if a queen can be placed on board[row][col]
-	 * @params takes 2d array of type int and size of array
+	 * @params board - 2-D array to store movement of queen
+	 * @param row - row number of queen
+	 * @param col - column number of queen
+	 * @param size- size of board
 	 * @returns bool results
 	 */ 
 	boolean isSafe(int board[][],int row,int col, int size) {
@@ -42,7 +45,9 @@ class arrangeNQueen{
 	
 	
 	/* A recursive utility function to solve N Queen problem
-	 * @params takes 2d array of type int and size of array
+	 *@params board - 2-D array to store movement of queen
+	 * @param row - row number of queen is currently at.
+	 * @param size - size of board
 	 * @returns bool results
 	 */ 
 	boolean nQueen(int board[][],int row,int size) {

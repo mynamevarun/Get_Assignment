@@ -3,9 +3,12 @@ import java.util.*;
 
 class searching{
 	/**
-	 * Recursive Linear Search
-	 * @param Take array and value to be search
-	 * @return   index if value is present and if not then return -1
+	 * Implementation of Recursive Linear Search
+	 * @param arr[] - array of integer type
+	 * @param start - starting index of array.
+	 * @param last - ending index of array
+	 * @param noToSearch- value to be search
+	 * @return index i such that arr[i] == noToSearch and if not then return -1
 	 */
 	public int LinearSearch(int arr[], int start, int last,int noToSearch ) {
 		
@@ -15,16 +18,19 @@ class searching{
 		if(arr[start]==noToSearch) {
 			return start;
 		}
-		if(arr[last] == noToSearch) {
+		if(arr[last] == noToSearch) {     
 			return last;
 		}
-		return LinearSearch(arr,start+1,last-1,noToSearch);
+		return LinearSearch(arr,start+1,last-1,noToSearch);     
 	}
 	
 	/**
-	 * Recursive Binary Search
-	 * @param Take array and value to be search
-	 * @return   index if value is present and if not then return -1
+	 * Implementation of Recursive Binary Search
+	 * @param arr[] - array of integer type
+	 * @param start - starting index of array.
+	 * @param last - ending index of array
+	 * @param noToSearch - value to be search in array
+	 * @return  index i such that arr[i] == noToSearch and if not then return -1
 	 */
 	public int BinarySearch(int arr[], int start, int last, int noToSearch) {
 		
