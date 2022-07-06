@@ -1,6 +1,10 @@
 package p5;
 import java.util.*;
 
+/*
+ * This class perform the searching operation on given values.
+ * @author Bhavya
+ */
 class searching{
 	/**
 	 * Implementation of Recursive Linear Search
@@ -12,6 +16,9 @@ class searching{
 	 */
 	public int LinearSearch(int arr[], int start, int last,int noToSearch ) {
 		
+		if(arr == null || arr.length==0) {
+			return -1;
+		}
 		if(last<start) {
 			return -1;
 		}
@@ -33,6 +40,10 @@ class searching{
 	 * @return  index i such that arr[i] == noToSearch and if not then return -1
 	 */
 	public int BinarySearch(int arr[], int start, int last, int noToSearch) {
+		
+		if(arr == null || arr.length==0) {
+			return -1;
+		}
 		
 		if(last >= start) {
 			int mid = start +(last-start)/2;
@@ -56,8 +67,6 @@ class searching{
 		return -1;
 	}
 }
-
-
 
 public class Search {
 	

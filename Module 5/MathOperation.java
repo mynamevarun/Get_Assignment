@@ -1,6 +1,12 @@
 package p5;
 import java.util.*;
 
+
+/** 
+ * This class will perform functions like finding out the 
+ * lcm and hcf of given input numbers   
+ *  @author Bhavya
+ */
 class HcfAndLcm{
 	
 	static int multiple=0; //using static variable to hold the value
@@ -12,6 +18,9 @@ class HcfAndLcm{
 	 * @return   return the lcm of two numbers
 	 */
 	public int calculateLcm(int num1,int num2) {
+		
+		if(num1==0 || num2==0)
+			return 0;
 		
 		multiple+=num2;
 		
@@ -33,6 +42,11 @@ class HcfAndLcm{
 	public int calculateHcf(int num1,int num2) {
 		
 		// base case
+		if(num1==0)
+			return num2;
+		if(num2==0)
+			return num1;
+		
 		if(num1%num2==0) {
 			return num2;
 		}
@@ -71,7 +85,7 @@ public class MathOperation {
 			num2 = sc.nextInt();
 			// check if number is positive or not
 			if(num1 <=0 || num2<=0) { 
-				System.out.println("The number should be Positive! RETRY. ");
+				System.out.println("The number should be Positive! RETRY.");
 				break;
 			}
 			System.out.println("The Lcm of two number is : "+hl.calculateLcm(num1, num2));

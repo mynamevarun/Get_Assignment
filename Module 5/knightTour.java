@@ -1,6 +1,12 @@
 package p5;
 import java.util.*;
 
+/**
+ *  This class contain functions use to find out the moves of knight in 
+ *  proper order and print them in array.
+ *   @author Bhavya   
+ */
+
 public class knightTour {
 	
 	public static final int N = 8;
@@ -57,8 +63,8 @@ public class knightTour {
     		   }
     		   return false;
          }
-    
-    /*  function to process the knight's tour solutions
+    	
+    /*  Function to process the knight's tour solutions
 	 * @params visited- 2-D array use to store the order of movement of knight
 	 * @returns True/False: based on results
 	 */ 

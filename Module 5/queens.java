@@ -1,6 +1,11 @@
 package p5;
 import java.util.*;
 
+/**
+ * This class is used to solve NQueen problem using backtracking
+ * @author Bhavya
+ */
+
 class arrangeNQueen{
 	
 	/*A function to check if a queen can be placed on board[row][col]
@@ -10,6 +15,7 @@ class arrangeNQueen{
 	 * @param size- size of board
 	 * @returns bool results
 	 */ 
+	
 	boolean isSafe(int board[][],int row,int col, int size) {
 		
 		// checking for each row 
@@ -50,7 +56,7 @@ class arrangeNQueen{
 	 * @param size - size of board
 	 * @returns bool results
 	 */ 
-	boolean nQueen(int board[][],int row,int size) {
+	boolean nQueen(int board[][],int row, int size) {
 		
 		// base case
 		if(row==size) {
