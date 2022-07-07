@@ -1,3 +1,5 @@
+package p8;
+
 
 public interface EmployeeInterface {
 	double getBasicSalary();
