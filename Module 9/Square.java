@@ -53,13 +53,7 @@ public class Square implements Shape {
 		return "SQUARE";
 	}
 
-	@Override
-	public double getOriginDistance() {
-
-		return Math.sqrt((originPoint.x - 0) * (originPoint.x - 0)
-				+ (originPoint.y - 0) * (originPoint.y - 0));
-	}
-
+	
 	/**
 	 * 
 	 * @return diagonally opposite points of square.

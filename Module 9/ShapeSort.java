@@ -19,17 +19,7 @@ public class ShapeSort
         }
     };
     
-    /**
-	 * sort shapes by parameter
-	 */
-    public static Comparator<Shape> sortByPerimeter = new Comparator<Shape>() {
-        public int compare(Shape s1, Shape s2) {
-
-            return (s1.getPerimeter() < s2.getPerimeter() ? -1 :                     
-                  (s1.getPerimeter() == s2.getPerimeter() ? 0 : 1));      
-        }
-    };
-    
+   
     /**
      * sort shapes by origin distance
      */

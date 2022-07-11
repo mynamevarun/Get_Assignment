@@ -13,7 +13,7 @@ public class Circle implements Shape {
 		this.radius = radius;
 		this.date = date;
 		this.originPoint = originPoint;
-		this.center = getCenterCoordinates();
+		
 	}
 
 	@Override
@@ -57,29 +57,5 @@ public class Circle implements Shape {
 				+ (originPoint.y - 0) * (originPoint.y - 0));
 	}
 
-	/**
-	 * @param center
-	 * @param givenPoint
-	 * @return distance between center and given point
-	 */
-	private double getDistance(Point center, Point givenPoint) {
-		// distance = square root of ((x2-x1)^2 + (y2-y1)^2)
-		return Math.sqrt((center.x - givenPoint.x) * (center.x - givenPoint.x)
-				+ (center.y - givenPoint.y) * (center.y - givenPoint.y));
-	}
-
-	/**
-	 * @return coordinates of center
-	 */
-	private Point getCenterCoordinates() {
-		double xAxis, yAxis;
-		double theta = Math.atan(originPoint.y / originPoint.x); // tan inverse
-																	// of slope
-
-		yAxis = radius * Math.sin(theta);
-		xAxis = radius * Math.cos(theta);
-
-		return new Point(originPoint.x + xAxis, originPoint.y + yAxis);
-	}
-
+	
 }
