@@ -1,0 +1,210 @@
+
+
+
+/* This is for cards*/
+.column {
+  float: left;
+  width: 30%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 250px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+
+/* This configuration is for collapsing and expanding */
+
+#hide1{
+  background-color: #04AA6D;
+ 
+  font-size: 30px;
+  height: 50px;
+  width: 100%;
+  
+  
+}
+#hide2{
+  background-color: #04AA6D;
+ 
+  font-size: 30px;
+  height: 50px;
+  width: 100%;
+  
+}
+#hide3{
+  background-color: #04AA6D;
+ 
+  font-size: 30px;
+  height: 50px;
+  width: 100%;
+}
+#hide4{
+  background-color: #04AA6D;
+ 
+  font-size: 30px;
+  height: 50px;
+  width: 100%;
+}
+
+ a{
+  
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.details{
+  background-color:#f2f2f2;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button{
+  background-color: #04AA6D;
+  color: white;
+}
+.details,
+.show,
+.hide:target {
+  display: none;
+}
+.hide:target + .show,
+.hide:target ~ .details {
+  display: block;
+}
+
+
+/* This is for navbar */
+body {margin: 0;
+  }
+
+ul.topnav {
+  height: 60px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  height: 60px;
+  display: block;
+  font-size: 18px;
+  color:  white 1px solid ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #04AA6D;
+  font-size: 30px;}
+ul.topnav li.right {float: right;}
+
+
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+
+/* This is for Image hover effect */
+.container {
+  position: relative;
+  width: 100%;
+  margin-left: 10%;
+  padding-bottom: 50px;
+  
+ }
+ 
+.image {
+  opacity: 1;
+  display: block;
+  width: 80%;
+  height: 550px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
