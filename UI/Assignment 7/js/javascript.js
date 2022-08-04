@@ -1,12 +1,18 @@
+/*
+Edited by Varun Kumar
+1. Instead of defining variables for employee use objects provided by JS.
+2. Do not use hardcoded values
+*/
+
 var employeeName, employeeGender, employeeEmail, 
 employeePassword, 
 employeeMatchPassword, employeeNumber,currentField,
-currentForm,moneypass;
+currentForm,moneypass; //1
 
 
 /* event listener for enter key */
 window.addEventListener('keypress', function (e) {
-    if (e.keyCode == 13) {
+    if (e.keyCode == 13) { //2
         onBlur();
     }
 }, false);
